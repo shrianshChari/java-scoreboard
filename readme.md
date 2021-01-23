@@ -48,3 +48,5 @@ Then, you add a Text source, check mark `Use Custom Script` and click the button
 ## To-do
 - Add extra text boxes for "miscellaneous" and "label" files
 - Being able to browse the user's computer to store the output files
+- Add tabbing panes to increase the amount of options in limited window
+- Create HTML output for scoreboard
