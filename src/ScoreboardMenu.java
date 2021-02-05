@@ -28,7 +28,7 @@ public class ScoreboardMenu implements ActionListener
     private final int SCORE_TEXTFIELD_HEIGHT = 100;
 
     private final int SCORE_BUTTON_WIDTH = SCORE_TEXTFIELD_WIDTH;
-    private final int SCORE_BUTTON_HEIGHT = SCORE_TEXTFIELD_HEIGHT;
+    private final int SCORE_BUTTON_HEIGHT = SCORE_TEXTFIELD_HEIGHT / 2;
     private final int SWPL_BUTTON_WIDTH = TEXTFIELD_WIDTH;
 
     private Font prefixfont = new Font("Dialog", Font.PLAIN, 12);
@@ -107,12 +107,12 @@ public class ScoreboardMenu implements ActionListener
 
         p1scoreup = new JButton("P1 +");
         p1scoreup.setBounds(p1score.getX() - SCORE_TEXTFIELD_WIDTH, p1score.getY(),
-            SCORE_TEXTFIELD_WIDTH, p1score.getHeight() / 2);
+            SCORE_BUTTON_WIDTH, SCORE_BUTTON_HEIGHT);
         panel.add(p1scoreup);
 
         p1scoredown = new JButton("P1 -");
         p1scoredown.setBounds(p1scoreup.getX(), p1scoreup.getY() + p1scoreup.getHeight(),
-            SCORE_TEXTFIELD_WIDTH, p1score.getHeight() / 2);
+            SCORE_BUTTON_WIDTH, SCORE_BUTTON_HEIGHT);
         panel.add(p1scoredown);
 
         p2prefix_label = new JLabel("Player 2 Prefix");
@@ -145,12 +145,12 @@ public class ScoreboardMenu implements ActionListener
 
         p2scoreup = new JButton("P2 +");
         p2scoreup.setBounds(p2score.getX() + SCORE_TEXTFIELD_WIDTH, p2score.getY(),
-            SCORE_TEXTFIELD_WIDTH, p2score.getHeight() / 2);
+            SCORE_BUTTON_WIDTH, SCORE_BUTTON_HEIGHT);
         panel.add(p2scoreup);
 
         p2scoredown = new JButton("P2 -");
         p2scoredown.setBounds(p2scoreup.getX(), p2scoreup.getY() + p2scoreup.getHeight(),
-            SCORE_TEXTFIELD_WIDTH, p2score.getHeight() / 2);
+            SCORE_BUTTON_WIDTH, SCORE_BUTTON_HEIGHT);
         panel.add(p2scoredown);
 
         update = new JButton("Update");
@@ -194,8 +194,13 @@ public class ScoreboardMenu implements ActionListener
         p2scoreup.addActionListener(this);
         p2scoredown.addActionListener(this);
         switchplayers.addActionListener(this);
-
-        frame.setVisible(true);
+    }
+    
+    /*
+     * Shows or hides the frame
+     */
+    public void setVisible(boolean b) {
+    	frame.setVisible(b);
     }
 
     /*

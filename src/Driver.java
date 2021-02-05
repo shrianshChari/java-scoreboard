@@ -9,5 +9,6 @@ public class Driver
         fw.prepareXML("scores.xml");
         
         ScoreboardMenu menu = new ScoreboardMenu();
+        menu.setVisible(true);
     }
 }
