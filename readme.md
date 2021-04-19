@@ -12,10 +12,10 @@ It is primarily for use in streaming fighting game tournaments, and lets you cha
 
 ## Prerequisites
 
-Your computer should be running the latest version of the Java Development Kit to run this program. To check if you are running the latest JDK, enter the following command in your computer's command line:
+Your computer should be running the latest version of Java to run this program. To check if you are running the latest JDK, enter the following command in your computer's command line:
 
 ```bash
-javac -version
+java -version
 ```
 
 ## Usage
